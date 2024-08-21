@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo Portátil</title>
+    <style>
+        body {
+            background-color: #043d07; /* Azul más oscuro */
+            color: #f8f8f8; /* Texto negro */
+            font-family: Arial, Helvetica, sans-serif; /* Fuente */
+            line-height: 1.6;
+            text-align: center; /* Centra todo el texto */
+        }
+        h1 {
+            color: #ffffff; /* Texto negro */
+            margin-top: 20px;
+        }
+        #title-bar {
+            display: block;
+            margin: 20px auto; /* Centra horizontalmente */
+            height: 5px;
+            background-color: #000000; /* Línea negra */
+            width: 80%; /* Ajusta la anchura de la línea */
+        }
+        h2, h3 {
+            color: #ffffff; /* Texto negro */
+            margin-top: 20px;
+        }
+        nav a {
+            color: #e9e9e9;
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline-block; /* Para centrado */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 20px 0;
+        }
+        .box {
+            border: 2px solid #000000; /* Borde negro */
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%; /* Ancho de la caja */
+            background-color: #570202; /* Fondo rojo */
+            border-radius: 10px; /* Esquinas redondeadas */
+            text-align: left; /* Alineación del texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Semáforo Portátil para la Seguridad Vial</h1>
+    <div id="title-bar"></div>
+    
+    <nav>
+        <!-- Enlaces a las secciones -->
+        <a href="#objetivos"><h4>OBJETIVOS Y PROBLEMAS GENERALES</h4></a>
+        <a href="#programacion"><h4>PROGRAMACIÓN</h4></a>
+        <a href="#circuitos"><h4>CIRCUITOS</h4></a>
+        <a href="#materiales"><h4>MATERIALES</h4></a>
+    </nav>
+
+    <!-- Sección 1 -->
+    <h2 id="objetivos">Objetivos y problemas generales</h2>
+    <div class="box">
+        <h3 id="Objetivo General">Objetivo General</h3>
+        <p> Diseñar un semáforo portátil utilizando Arduino, que sea útil para la seguridad</p>
+        <p>vial colaborando al proyecto ciempiés, que se realizará en el colegio Brasilia bosa I.E.D</p> 
+    </div>
+    <div class="box">
+        <h3 id="Objetivos Específicos">Objetivos específicos</h3>
+        <p>1. Recrear el circuito del semáforo en la plataforma tinkercad y verificar su comportamiento.</p> 
+        <p>2. Construir un semáforo compacto y liviano para facilitar su transporte.</p>
+        <p>3. Desarrollar un sistema de energía eficiente para su funcionamiento autónomo.</p>
+        <p>4. Garantizar la visibilidad y claridad de las señales luminosas en distintos tiempos de la tarde. </p>
+    </div>
+    <div class="box">
+        <h3 id="disenar">Diseñar el Semáforo con Arduino</h3>
+        <p>El diseño comienza conectando cada LED a un pin digital del Arduino mediante resistencias. El LED rojo se conecta al pin digital 12 y el LED verde al pin 11. Cada LED está controlado individualmente por el Arduino, lo que permite gestionar las secuencias del semáforo.</p>
+        <p>El botón se conecta al pin digital 2, permitiendo la interacción manual para cambiar el estado de las luces. Además, un panel solar puede integrarse para hacer el sistema autónomo en términos de energía.</p>
+    </div>
+    <div class="box">
+        <h3 id="seguridad">Muy Poca Seguridad en los Estudiantes</h3>
+        <p>Para analizar la falta de seguridad vial entre los estudiantes, primero identificamos los problemas específicos como el comportamiento de los estudiantes y el estado de las vías cercanas a la escuela. Luego, revisamos la infraestructura, asegurándonos de que las calles y señales estén en buen estado. Observamos cómo los estudiantes interactúan con el tráfico y les preguntamos sobre sus hábitos de tránsito. También analizamos si hay suficiente educación y concienciación sobre seguridad vial en la escuela y si se están aplicando medidas efectivas para mejorar la seguridad.</p>
+    </div>
+
+    <!-- Sección 2 -->
+    <h2 id="programacion">Programación</h2>
+    <div class="box">
+        <p>Con la ayuda de placas de desarrollo como Arduino se controla el Display para que muestren señales tanto a los conductores como a los estudiantes que están próximos a cruzar, simulando el funcionamiento de un semáforo real.</p>
+    </div>
+
+    <!-- Sección 3 -->
+    <h2 id="circuitos">Circuitos</h2>
+    <div class="box">
+        <p>Para el semáforo, el circuito principal se basa en un botón que controla las luces. El botón está conectado al Arduino y permite cambiar entre las diferentes luces del semáforo (rojo y verde). Cuando se presiona el botón, el Arduino enciende la luz correspondiente. No se utilizan temporizadores en este diseño; el cambio de luces se controla manualmente con el botón.</p>
+    </div>
+    <div class="box">
+        <h3 id="microcontrolador">Microcontrolador</h3>
+        <p>El microcontrolador utilizado en este proyecto es un Arduino Uno. Este dispositivo es el cerebro del semáforo, ya que se encarga de controlar las luces según el estado del botón y la pantalla del Display. El Arduino Uno procesa las señales del botón y enciende o apaga los LEDs (rojo y verde) en respuesta. Tiene pines digitales para conectar los LEDs y el botón, y es programable a través del entorno de desarrollo de Arduino para definir cómo deben comportarse las luces del semáforo.</p>
+    </div>
+
+    <!-- Sección 4 -->
+    <h2 id="materiales">Materiales</h2>
+    <div class="box">
+        <p>Arduino Uno: El microcontrolador principal encargado de gestionar las señales del semáforo.</p>
+        <p>LEDs: Dos LEDs (rojo, y verde) que simulan las luces del semáforo.</p>
+        <p>Resistencias: Protegen los LEDs de sobrecargas.</p>
+        <p>Botón de Control: Permite cambiar el estado del semáforo manualmente.</p>
+        <p>Panel Solar: Para alimentar el sistema de manera sostenible.</p>
+        <p>Cables de Conexión: Para interconectar todos los componentes.</p>
+        <p>Display: Muestra ilustraciones que proporcionan señales claras para el cruce de peatones, detenimiento de vehículos y al revés.</p>
+    </div>
+    <div class="box">
+        <h3 id="cables">Cables de Conexión</h3>
+        <p>Cables de Alimentación y Cables de Conexión</p>
+        <p>Cables de Alimentación: Estos cables son esenciales para suministrar energía al Arduino y a los componentes del semáforo. Utilizamos cables de alimentación para conectar el panel solar o una fuente de energía externa al Arduino, asegurando que todos los componentes funcionen correctamente. Estos cables garantizan que el sistema esté energizado de manera continua y estable.</p>
+        <p>Cables de Conexión para LEDs y Botón: Los cables de conexión se emplean para interconectar los LEDs (rojo y verde) y el botón con el Arduino. Utilizamos cables de puente para conectar cada LED a los pines digitales del Arduino a través de resistencias. El botón también se conecta a un pin digital del Arduino mediante cables de conexión, permitiendo así el control manual del semáforo. Estos cables aseguran una conexión fiable y ordenada entre el Arduino y los componentes del circuito.</p>
+    </div>
+
+</body>
+</html>
+
+
